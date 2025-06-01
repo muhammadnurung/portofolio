@@ -1,0 +1,81 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body, button, span, div, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+a:hover {
+  color: #0d3b66;
+  transition: color 0.3s ease;
+}
+
+#typing-text {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #a855f7;
+  }
+}
+
+.skill-card {
+  position: relative;
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card:hover {
+  transform: scale(1.05) rotateX(6deg) rotateY(6deg);
+  box-shadow: 0 10px 25px rgba(168, 139, 250, 0.3);
+}
+
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.5rem;
+}
+
+.progress-container {
+  background-color: #374151;
+  border-radius: 9999px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-bar {
+  background-color: #a78bfa;
+  height: 100%;
+  width: 0%;
+  transition: width 1s ease-in-out;
+}
+
+.skill-card:hover .progress-bar {
+  width: var(--skill-level);
+}
+
+.skill-description {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-top: 0.5rem;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
