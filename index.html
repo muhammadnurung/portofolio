@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Nurung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body
+    class="overflow-x-hidden bg-gradient-to-b from-black via-gray-900 to-black text-white font-sans bg-[url('assets/img/bg-pattern.png')] bg-cover bg-center bg-fixed"
+  >
+    <!-- Navbar -->
+    <nav class="bg-purple-900 text-white fixed top-0 left-0 w-full z-50 shadow-md">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <div class="text-2xl font-bold">Nurung</div>
+
+          <!-- Hamburger Button (Mobile) -->
+          <button id="menu-button" class="md:hidden focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          <div
+            id="menu"
+            class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static bg-purple-900 md:bg-transparent w-full max-w-full left-0 md:w-auto top-full md:top-auto px-4 md:px-0 py-4 md:py-0 overflow-hidden"
+          >
+            <a href="#beranda" class="flex items-center gap-2 block py-2 md:py-0 hover:text-purple-300">
+              <i data-feather="home" class="w-4 h-4"></i> Home
+            </a>
+            <a href="#about" class="flex items-center gap-2 block py-2 md:py-0 hover:text-purple-300">
+              <i data-feather="user" class="w-4 h-4"></i> About Me
+            </a>
+            <a href="#skills" class="flex items-center gap-2 block py-2 md:py-0 hover:text-purple-300">
+              <i data-feather="cpu" class="w-4 h-4"></i> Skills
+            </a>
+            <a href="#proyek" class="flex items-center gap-2 block py-2 md:py-0 hover:text-purple-300">
+              <i data-feather="folder" class="w-4 h-4"></i> Project
+            </a>
+            <a href="#kontak" class="flex items-center gap-2 block py-2 md:py-0 hover:text-purple-300">
+              <i data-feather="mail" class="w-4 h-4"></i> Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Beranda -->
+    <section id="beranda" class="pt-32 py-20 text-center" data-aos="fade-up">
+      <div class="px-4 sm:px-6 lg:px-8">
+        <div
+          class="inline-block rounded-full border-4 border-purple-500 transition duration-300 hover:scale-105 hover:border-purple-300 shadow-lg"
+        >
+          <img src="assets/img/Profile.JPG" alt="Foto Nurung" class="w-64 h-64 rounded-full" />
+        </div>
+
+        <h2 class="text-3xl font-bold text-purple-400 mt-6 mb-2">Halo, saya Nurung!</h2>
+
+        <p class="text-lg max-w-xl mx-auto text-gray-300 leading-relaxed">
+          <strong><span id="typing-text" class="border-r-2 border-purple-400 pr-1"></span></strong>
+        </p>
+
+        <div class="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+          <a
+            href="assets/cv/nurung-cv.pdf"
+            download
+            class="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 hover:scale-105 transition duration-300"
+          >
+            <i data-feather="download" class="w-5 h-5"></i>
+            Download CV
+          </a>
+
+          <a
+            href="#about"
+            class="inline-flex items-center gap-2 px-6 py-3 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-700 hover:text-white transition duration-300 text-center"
+          >
+            <i data-feather="arrow-down-circle" class="w-5 h-5"></i>
+            More About Me
+          </a>
+        </div>
+
+        <div class="flex justify-center gap-4 mt-8">
+          <a
+            href="https://instagram.com/nurunk8102"
+            target="_blank"
+            aria-label="Instagram"
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300"
+          >
+            <i data-feather="instagram" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://wa.me/6288272126746"
+            target="_blank"
+            aria-label="WhatsApp"
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300"
+          >
+            <i data-feather="message-circle" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/muhammad-nurung"
+            target="_blank"
+            aria-label="LinkedIn"
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300"
+          >
+            <i data-feather="linkedin" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://facebook.com/nurunk.bvs"
+            target="_blank"
+            aria-label="Facebook"
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300"
+          >
+            <i data-feather="facebook" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="py-20 bg-gray-950 text-center" data-aos="fade-up">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-purple-400 mb-8 inline-flex items-center gap-2 justify-center">
+          <i data-feather="user" class="w-7 h-7"></i>
+          About Me
+        </h2>
+        <p class="text-base sm:text-lg text-gray-300 leading-relaxed text-justify sm:text-center">
+          Saya adalah seorang mahasiswa jurusan <strong>Teknik Komputer</strong> yang memiliki ketertarikan besar di
+          dunia <strong>pemrograman</strong> dan <strong>desain</strong>. Bagi saya, coding bukan hanya tentang menyusun
+          logika, tapi juga tentang menciptakan sesuatu yang fungsional dan estetis. Saya senang menggabungkan
+          kreativitas dengan teknologi untuk menghasilkan karya digital yang menarik dan bermanfaat.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20 bg-gray-900 text-center" data-aos="fade-left">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-purple-400 mb-10 inline-flex items-center gap-2">
+          <i data-feather="cpu" class="w-7 h-7"></i>
+          Skills
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+          <!-- Skill Item -->
+          <div class="skill-card text-white text-center" style="--skill-level: 90%" data-aos="zoom-in">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML"
+              class="skill-icon mx-auto"
+            />
+            <h4 class="text-lg font-semibold">HTML</h4>
+            <div class="progress-container mt-2">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="skill-card text-white text-center" style="--skill-level: 80%" data-aos="zoom-in">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS"
+              class="skill-icon mx-auto"
+            />
+            <h4 class="text-lg font-semibold">CSS</h4>
+            <div class="progress-container mt-2">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="skill-card text-white text-center" style="--skill-level: 70%" data-aos="zoom-in">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              class="skill-icon mx-auto"
+            />
+            <h4 class="text-lg font-semibold">JavaScript</h4>
+            <div class="progress-container mt-2">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="skill-card text-white text-center" style="--skill-level: 60%" data-aos="zoom-in">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              alt="PHP"
+              class="skill-icon mx-auto"
+            />
+            <h4 class="text-lg font-semibold">PHP</h4>
+            <div class="progress-container mt-2">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="skill-card text-white text-center" style="--skill-level: 70%" data-aos="zoom-in">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+              alt="MySQL"
+              class="skill-icon mx-auto"
+            />
+            <h4 class="text-lg font-semibold">MySQL</h4>
+            <div class="progress-container mt-2">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="skill-card text-white text-center" style="--skill-level: 50%" data-aos="zoom-in">
+            <img
+              src="https://img.icons8.com/color/96/adobe-illustrator--v1.png"
+              alt="Illustrator"
+              class="skill-icon mx-auto"
+            />
+            <h4 class="text-lg font-semibold">Illustrator</h4>
+            <div class="progress-container mt-2">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="skill-card text-white text-center" style="--skill-level: 50%" data-aos="zoom-in">
+            <img
+              src="https://img.icons8.com/color/96/adobe-photoshop--v1.png"
+              alt="Photoshop"
+              class="skill-icon mx-auto"
+            />
+            <h4 class="text-lg font-semibold">Photoshop</h4>
+            <div class="progress-container mt-2">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="skill-card text-white text-center" style="--skill-level: 80%" data-aos="zoom-in">
+            <img
+              src="https://img.icons8.com/color/96/microsoft-office-2019.png"
+              alt="Office"
+              class="skill-icon mx-auto"
+            />
+            <h4 class="text-lg font-semibold">Office</h4>
+            <div class="progress-container mt-2">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyek -->
+    <section id="proyek" class="py-20 bg-gray-950" data-aos="fade-right">
+      <div class="max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-purple-400 mb-10 inline-flex items-center gap-2 justify-center">
+          <i data-feather="folder" class="w-7 h-7"></i>
+          Latest Project
+        </h2>
+
+        <div class="flex justify-center">
+          <div
+            class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-700 transition duration-300 transform hover:scale-105 max-w-md w-full"
+          >
+            <img
+              src="assets/img/Project1/01.jpeg"
+              alt="Screenshot Project"
+              class="w-full h-48 object-cover transition duration-300 hover:scale-105"
+            />
+            <div class="p-4 text-center">
+              <h3 class="text-xl font-semibold text-purple-300 mb-2">Online Shop Coffe</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Website penjualan produk kopi dengan akses user dan admin, serta fitur lengkap online shop seperti
+                keranjang, pesanan, alamat dan chat admin.
+              </p>
+
+              <div class="flex justify-center flex-wrap gap-2 mb-4">
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">HTML</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">CSS</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">JavaScript</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">PHP</span>
+              </div>
+
+              <button
+                onclick="openModal()"
+                class="mt-2 inline-flex items-center gap-2 px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow hover:shadow-lg transition duration-300 transform hover:scale-105 border-2 border-transparent hover:border-purple-400"
+              >
+                <i data-feather="eye" class="w-4 h-4"></i>
+                Lihat Detail
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden transition-opacity duration-300"
+    >
+      <div
+        id="modalContent"
+        class="bg-gray-900 max-w-4xl w-full mx-4 p-6 rounded-lg relative opacity-0 scale-95 transform transition-all duration-300"
+      >
+        <button onclick="closeModal()" class="absolute top-2 right-4 text-white text-2xl">&times;</button>
+        <h3 class="text-purple-300 text-xl font-semibold mb-4">Detail Project</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project1/01.jpeg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Beranda utama yang akan diakses oleh user</p>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project1/02.jpeg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Tampilan product yang dijual</p>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project1/03.jpeg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Halaman chat penjual dan admin</p>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project1/04.jpeg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Halaman dashboard admin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Kontak -->
+    <section id="kontak" class="py-16 bg-gray-900 text-white" data-aos="zoom-in">
+      <div class="max-w-xl mx-auto text-center px-4 sm:px-0">
+        <h2 class="text-3xl font-bold text-purple-400 mb-6 inline-flex items-center gap-2">
+          <i data-feather="mail" class="w-7 h-7"></i>
+          Contact Me
+        </h2>
+        <form id="contact-form" class="space-y-4" onsubmit="return false;">
+          <div class="flex items-center bg-gray-800 rounded px-4 py-2 transition hover:shadow-lg hover:scale-[1.01]">
+            <i data-feather="user" class="text-purple-400 mr-2"></i>
+            <input
+              type="text"
+              name="from_name"
+              placeholder="Your Name"
+              required
+              class="w-full bg-gray-800 focus:bg-gray-800 text-white placeholder-gray-400 focus:outline-none"
+            />
+          </div>
+          <div class="flex items-center bg-gray-800 rounded px-4 py-2 transition hover:shadow-lg hover:scale-[1.01]">
+            <i data-feather="mail" class="text-purple-400 mr-2"></i>
+            <input
+              type="email"
+              name="reply_to"
+              placeholder="Your Email"
+              required
+              class="w-full bg-transparent focus:outline-none text-white placeholder-gray-400"
+            />
+          </div>
+          <div class="flex bg-gray-800 rounded px-4 py-2 transition hover:shadow-lg hover:scale-[1.01]">
+            <i data-feather="message-circle" class="text-purple-400 mr-2 mt-2"></i>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+              class="w-full bg-transparent focus:outline-none text-white placeholder-gray-400 h-32 resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            id="submit-btn"
+            class="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded text-white font-semibold transition hover:scale-105 hover:shadow-md"
+          >
+            <i data-feather="send"></i>
+            Send
+          </button>
+
+          <!-- Success Message -->
+          <div
+            id="success-msg"
+            class="hidden mt-4 inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg shadow text-sm"
+          >
+            <i data-feather="check-circle" class="w-5 h-5"></i>
+            <span>Message sent successfully!</span>
+          </div>
+
+          <!-- Error Message -->
+          <div
+            id="error-msg"
+            class="hidden mt-4 inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg shadow text-sm"
+          >
+            <i data-feather="x-circle" class="w-5 h-5"></i>
+            <span>An error occurred while sending the message.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-gray-1000 text-purple-400 py-7 mt-10">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left"
+      >
+        <p>&copy; 2025 Muhammad Nurung. All rights reserved.</p>
+
+        <div class="flex gap-4">
+          <a
+            href="https://instagram.com/nurunk8102"
+            target="_blank"
+            aria-label="Instagram"
+            class="hover:text-purple-400 transition"
+          >
+            <i data-feather="instagram" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/muhammad-nurung"
+            target="_blank"
+            aria-label="LinkedIn"
+            class="hover:text-purple-400 transition"
+          >
+            <i data-feather="linkedin" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://facebook.com/nurunk.bvs"
+            target="_blank"
+            aria-label="Facebook"
+            class="hover:text-purple-400 transition"
+          >
+            <i data-feather="facebook" class="w-5 h-5"></i>
+          </a>
+          <a href="mailto:nurunk8102@gmail.com" aria-label="Email" class="hover:text-purple-400 transition">
+            <i data-feather="mail" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS & JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
