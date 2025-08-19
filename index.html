@@ -340,10 +340,10 @@
               class="w-full h-48 object-cover transition duration-300 hover:scale-105"
             />
             <div class="p-4 text-center">
-              <h3 class="text-xl font-semibold text-purple-300 mb-2">Mechanum Wheel Robot</h3>
+              <h3 class="text-xl font-semibold text-purple-300 mb-2">Mecanum Wheel Robot</h3>
               <p class="text-gray-400 text-sm mb-4">
-                Robot beroda berbasis mecanum wheel yang dapat dikendalikan melalui handphone menggunakan aplikasi Dabble, 
-                di mana koneksi antara keduanya terhubung melalui Bluetooth.
+                Robot beroda berbasis mecanum wheel yang dapat dikendalikan melalui handphone menggunakan aplikasi
+                Dabble, di mana koneksi antara keduanya terhubung melalui Bluetooth.
               </p>
 
               <div class="flex justify-center flex-wrap gap-2 mb-4">
@@ -524,13 +524,14 @@
         <button onclick="closeModal('modal3')" class="absolute top-2 right-4 text-white text-2xl">&times;</button>
         <h3 class="text-purple-300 text-xl font-semibold mb-4">Detail Project</h3>
         <p class="text-gray-400 text-sm mb-4 text-justify">
-          Alat ini merupakan sistem berbasis Internet of Things (IoT) yang dirancang untuk mendeteksi tingkat kekeruhan
-          air dengan menggunakan sensor <b>Turbidity</b> dan mikrokontroler <b>ESP32</b>.
-          <br />
-          Sebagai komponen utama, <b>sensor Turbidity</b> berfungsi untuk mengukur sejauh mana partikel atau kotoran
-          terlarut di dalam air sehingga dapat menunjukkan kondisi kejernihan air secara langsung. Data hasil pengukuran
-          kemudian diproses oleh <b>ESP32</b> yang tidak hanya berperan sebagai pengendali, tetapi juga memungkinkan
-          perangkat untuk terhubung ke jaringan WiFi agar dapat dipantau melalui BLYNK.
+          Robot ini merupakan robot beroda dengan mekanisme <b>mecanum wheel</b> yang mampu bergerak ke segala arah
+          secara fleksibel. Sistem kendali utama menggunakan mikrokontroler <b>ESP32</b> yang terhubung ke aplikasi
+          <b>Dabble</b> pada handphone melalui koneksi Bluetooth. Melalui aplikasi ini, pergerakan robot dapat diatur
+          sesuai dengan arah yang diinginkan, seperti maju, mundur, berputar, maupun menyamping. <br /><br />
+          Untuk mendukung pergerakannya, robot dilengkapi dengan empat <b>motor DC</b> yang masing-masing digerakkan
+          melalui <b>motor driver</b>. Motor driver berfungsi mengatur arah putaran dan kecepatan motor sesuai instruksi
+          yang dikirimkan ESP32. Dengan kombinasi ini, robot dapat bergerak dengan stabil, responsif, dan mudah
+          dikendalikan hanya menggunakan handphone.
         </p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -557,7 +558,6 @@
               <p class="text-white text-sm text-center px-2">Proses perakitan robot</p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
