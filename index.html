@@ -7,9 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body
@@ -263,9 +266,9 @@
           Latest Project
         </h2>
 
-        <div class="flex justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-700 transition duration-300 transform hover:scale-105 max-w-md w-full"
+            class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-700 transition duration-300 transform hover:scale-105"
           >
             <img
               src="assets/img/Project1/01.jpeg"
@@ -287,7 +290,71 @@
               </div>
 
               <button
-                onclick="openModal()"
+                onclick="openModal('modal1')"
+                class="mt-2 inline-flex items-center gap-2 px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow hover:shadow-lg transition duration-300 transform hover:scale-105 border-2 border-transparent hover:border-purple-400"
+              >
+                <i data-feather="eye" class="w-4 h-4"></i>
+                Lihat Detail
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-700 transition duration-300 transform hover:scale-105"
+          >
+            <img
+              src="assets/img/Project2/01.jpg"
+              alt="Screenshot Project"
+              class="w-full h-48 object-cover transition duration-300 hover:scale-105"
+            />
+            <div class="p-4 text-center">
+              <h3 class="text-xl font-semibold text-purple-300 mb-2">Pendeteksi Kekeruhan Air</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Alat berbasis Internet of Things yang digunakan untuk mendeteksi tingkat kekeruhan air. Perangkat ini
+                memanfaatkan sensor Turbidity dan dikendalikan oleh mikrokontroler ESP32.
+              </p>
+
+              <div class="flex justify-center flex-wrap gap-2 mb-4">
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">C++</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">IoT</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">ESP32</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">Sensor Turbidity</span>
+              </div>
+
+              <button
+                onclick="openModal('modal2')"
+                class="mt-2 inline-flex items-center gap-2 px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow hover:shadow-lg transition duration-300 transform hover:scale-105 border-2 border-transparent hover:border-purple-400"
+              >
+                <i data-feather="eye" class="w-4 h-4"></i>
+                Lihat Detail
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-700 transition duration-300 transform hover:scale-105"
+          >
+            <img
+              src="assets/img/Project3/01.jpg"
+              alt="Screenshot Project"
+              class="w-full h-48 object-cover transition duration-300 hover:scale-105"
+            />
+            <div class="p-4 text-center">
+              <h3 class="text-xl font-semibold text-purple-300 mb-2">Mechanum Wheel Robot</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Robot beroda berbasis mecanum wheel yang dapat dikendalikan melalui handphone menggunakan aplikasi Dabble, 
+                di mana koneksi antara keduanya terhubung melalui Bluetooth.
+              </p>
+
+              <div class="flex justify-center flex-wrap gap-2 mb-4">
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">C++</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">Robotika</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">ESP32</span>
+                <span class="bg-purple-700 text-white text-xs px-3 py-1 rounded-full">Dabble</span>
+              </div>
+
+              <button
+                onclick="openModal('modal3')"
                 class="mt-2 inline-flex items-center gap-2 px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow hover:shadow-lg transition duration-300 transform hover:scale-105 border-2 border-transparent hover:border-purple-400"
               >
                 <i data-feather="eye" class="w-4 h-4"></i>
@@ -301,15 +368,27 @@
 
     <!-- Modal -->
     <div
-      id="modal"
+      id="modal1"
       class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden transition-opacity duration-300"
     >
       <div
         id="modalContent"
-        class="bg-gray-900 max-w-4xl w-full mx-4 p-6 rounded-lg relative opacity-0 scale-95 transform transition-all duration-300"
+        class="bg-gray-900 max-w-4xl w-full mx-4 p-6 rounded-lg relative opacity-0 scale-95 transform transition-all duration-300 max-h-[90vh] overflow-y-auto"
       >
-        <button onclick="closeModal()" class="absolute top-2 right-4 text-white text-2xl">&times;</button>
+        <button onclick="closeModal('modal1')" class="absolute top-2 right-4 text-white text-2xl">&times;</button>
         <h3 class="text-purple-300 text-xl font-semibold mb-4">Detail Project</h3>
+        <p class="text-gray-400 text-sm mb-4 text-justify">
+          Website ini merupakan platform penjualan kopi bubuk yang memiliki dua role, yaitu <b>admin</b> dan
+          <b>user</b>.
+          <br />
+          Sebagai <b>user</b>, pengunjung dapat melihat daftar produk yang dijual, membaca rating serta komentar dari
+          setiap produk, menambahkan produk ke keranjang, dan melakukan pemesanan. Selain itu, user juga dapat mengirim
+          pesan langsung kepada admin untuk menanyakan detail produk.
+          <br />
+          Sebagai <b>admin</b>, pengguna dapat mengelola pesanan yang masuk, menambahkan atau mengubah produk yang
+          dijual, mengatur akun user, serta melihat jumlah penjualan dari setiap produk.
+        </p>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="relative group overflow-hidden rounded-lg">
             <img
@@ -358,6 +437,127 @@
               <p class="text-white text-sm text-center px-2">Halaman dashboard admin</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal2"
+      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden transition-opacity duration-300"
+    >
+      <div
+        id="modalContent"
+        class="bg-gray-900 max-w-4xl w-full mx-4 p-6 rounded-lg relative opacity-0 scale-95 transform transition-all duration-300 max-h-[90vh] overflow-y-auto"
+      >
+        <button onclick="closeModal('modal2')" class="absolute top-2 right-4 text-white text-2xl">&times;</button>
+        <h3 class="text-purple-300 text-xl font-semibold mb-4">Detail Project</h3>
+        <p class="text-gray-400 text-sm mb-4 text-justify">
+          Alat ini merupakan sistem berbasis Internet of Things (IoT) yang dirancang untuk mendeteksi tingkat kekeruhan
+          air dengan menggunakan sensor <b>Turbidity</b> dan mikrokontroler <b>ESP32</b>.
+          <br />
+          Sebagai komponen utama, <b>sensor Turbidity</b> berfungsi untuk mengukur sejauh mana partikel atau kotoran
+          terlarut di dalam air sehingga dapat menunjukkan kondisi kejernihan air secara langsung. Data hasil pengukuran
+          kemudian diproses oleh <b>ESP32</b> yang tidak hanya berperan sebagai pengendali, tetapi juga memungkinkan
+          perangkat untuk terhubung ke jaringan WiFi agar dapat dipantau melalui BLYNK.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project2/01.jpg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Uji coba alat menggunakan air keruh</p>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project2/02.jpg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Tampilan LCD air keruh</p>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project2/03.jpg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Tampilan LCD air jernih</p>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project2/04.jpg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Tata letak komponen didalam box</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal3"
+      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden transition-opacity duration-300"
+    >
+      <div
+        id="modalContent"
+        class="bg-gray-900 max-w-4xl w-full mx-4 p-6 rounded-lg relative opacity-0 scale-95 transform transition-all duration-300 max-h-[90vh] overflow-y-auto"
+      >
+        <button onclick="closeModal('modal3')" class="absolute top-2 right-4 text-white text-2xl">&times;</button>
+        <h3 class="text-purple-300 text-xl font-semibold mb-4">Detail Project</h3>
+        <p class="text-gray-400 text-sm mb-4 text-justify">
+          Alat ini merupakan sistem berbasis Internet of Things (IoT) yang dirancang untuk mendeteksi tingkat kekeruhan
+          air dengan menggunakan sensor <b>Turbidity</b> dan mikrokontroler <b>ESP32</b>.
+          <br />
+          Sebagai komponen utama, <b>sensor Turbidity</b> berfungsi untuk mengukur sejauh mana partikel atau kotoran
+          terlarut di dalam air sehingga dapat menunjukkan kondisi kejernihan air secara langsung. Data hasil pengukuran
+          kemudian diproses oleh <b>ESP32</b> yang tidak hanya berperan sebagai pengendali, tetapi juga memungkinkan
+          perangkat untuk terhubung ke jaringan WiFi agar dapat dipantau melalui BLYNK.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project3/01.jpg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Dokumentasi bersama tim kelas</p>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-lg">
+            <img
+              src="assets/img/Project3/02.jpg"
+              class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+            >
+              <p class="text-white text-sm text-center px-2">Proses perakitan robot</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
