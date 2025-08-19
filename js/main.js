@@ -41,11 +41,12 @@ function type() {
   }
 }
 
-function openModal() {
-  const modal = document.getElementById("modal");
-  const content = document.getElementById("modalContent");
+function openModal(id) {
+  const modal = document.getElementById(id);
+  const content = modal.querySelector("div");
 
   modal.classList.remove("hidden");
+  document.body.classList.add("overflow-hidden");
 
   setTimeout(() => {
     content.classList.remove("opacity-0", "scale-95");
@@ -53,16 +54,16 @@ function openModal() {
   }, 10);
 }
 
-function closeModal() {
-  const modal = document.getElementById("modal");
-  const content = document.getElementById("modalContent");
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  const content = modal.querySelector("div");
 
-  // Animasi keluar
   content.classList.remove("opacity-100", "scale-100");
   content.classList.add("opacity-0", "scale-95");
 
   setTimeout(() => {
     modal.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
   }, 300);
 }
 
